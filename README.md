@@ -1,16 +1,17 @@
 # dafipost
-App to create and modify short messages.
+App to create and modify short public messages.
 
 
 ## Tests
 
 ### Unit tests
 ```
-pytest -m "not functional"
+pytest
 ```
 
 ### Functional tests
 
 ```
-pytest -m functional
+python manage.py runserver
+pytest --functional
 ```
