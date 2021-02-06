@@ -1,0 +1,4 @@
+-r app.txt
+selenium~=3.141
+pytest~=6.2.2
+pytest-django
