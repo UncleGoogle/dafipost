@@ -1,11 +1,8 @@
 from django.urls import reverse
+from pytest_django.asserts import assertTemplateUsed
 
 
 def test_root_view(client):
-    url = reverse('index')
-    response = client.get(url)
+    response = client.get('/')
     assert response.status_code == 200
-    content = response.content.decode().lower()
-    assert '<title>blackdog</title>' in content
-    assert content.startswith('<html>')
-    assert content.endswith('</html>')
+    assertTemplateUsed(response, 'index.html')
