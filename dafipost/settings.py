@@ -12,7 +12,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
+import django_heroku
+
 import creds
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -143,3 +146,6 @@ SITE_ID = 1
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 LOGIN_REDIRECT_URL = 'home'
+
+# deployment helper
+django_heroku.settings(locals())
