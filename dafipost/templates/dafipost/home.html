@@ -12,6 +12,6 @@ Dafipost
         </br>
         {% include "blackdog/index.html" with username=user.username %}
     {% else %}
-        <a href="{% provider_login_url 'github' %}">Sign Up with Github</a>
+        <a href="{% provider_login_url 'github' %}">Sign up with Github</a>
     {% endif %}
 {% endblock content %}
