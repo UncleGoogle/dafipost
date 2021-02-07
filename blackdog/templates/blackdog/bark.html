@@ -1,0 +1,10 @@
+{{ bark.content }}
+</br></br>
+author: {{ bark.author.username }}
+</br>
+views: {{ bark.views }}
+
+{% if user.is_authenticated and bark.author == user %}
+</br>
+<a href="{% url 'blackdog:edit' bark.id %}">Edit</a>
+{% endif %}

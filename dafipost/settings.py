@@ -65,7 +65,10 @@ ROOT_URLCONF = 'dafipost.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'dafipost' / 'templates'],
+        'DIRS': [
+            BASE_DIR / 'dafipost' / 'templates' / 'dafipost',
+            BASE_DIR / 'blackdog' / 'templates' / 'blackdog',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
