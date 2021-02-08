@@ -1,0 +1,1 @@
+web: gunicorn dafipost.wsgi --log-file -
